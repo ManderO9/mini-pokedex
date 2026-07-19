@@ -1,59 +1,81 @@
-# MiniPokedex
+# Mini Pokedex
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.0.
+Mini Pokedex is an Angular 21 application that lets you browse Pokémons from the PokeAPI.
 
-## Development server
+## What this project does
 
-To start a local development server, run:
+The app presents a pokemon table with:
 
-```bash
-ng serve
-```
+- Colored type badges for each Pokémon
+- Core stats: HP, Attack, Defense, Sp. Atk, Sp. Def, Speed, and Total
+- Sortable columns for all stat values
+- Client-side pagination with 10, 25, or 50 rows per page
+- Debounced text search by name
+- Dropdown filtering by type
+- A slide-in detail panel that opens when a row is clicked, showing more information and an animated radar chart for the six base stats
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+The visual experience is built with Angular Material and ECharts, and the data is retrieved through a GraphQL-based service layer.
 
-## Code scaffolding
+## How to set up the project
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+### Prerequisites
 
-```bash
-ng generate component component-name
-```
+Make sure you have the following installed:
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+- Node.js
+- npm
+- Git
 
-```bash
-ng generate --help
-```
+### Install dependencies
 
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+From the project root, run:
 
 ```bash
-ng test
+npm install
 ```
 
-## Running end-to-end tests
+### Run the development server
 
-For end-to-end (e2e) testing, run:
+Start the app with:
 
 ```bash
-ng e2e
+npm start
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+Then open your browser at:
 
-## Additional Resources
+```text
+http://localhost:4200/
+```
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+## Useful commands
+
+
+## Project folder structure
+
+```text
+src/
+├── app/
+│   ├── common/
+│   │   ├── constants/
+│   │   ├── models/
+│   │   ├── services/
+│   └── pokemon/
+│       ├── components/
+│       │   └── pokemon-list/
+│       └── services/
+├── index.html
+├── main.ts
+└── styles.scss
+```
+
+
+## Error handling
+
+The app handles 4 states when loading data:
+1. Loading: showing a message indicating that the data is loading.
+2. Empty: showing a message indicating that no data exists.
+3. Error: a toast message with an error message that has a retry button
+4. Success: the data is shown to the user
+
