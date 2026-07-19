@@ -6,7 +6,7 @@ import { provideAnimationsAsync } from "@angular/platform-browser/animations/asy
 import { provideLottieOptions } from "ngx-lottie";
 import { provideEchartsCore } from "ngx-echarts";
 import * as echarts from "echarts/core";
-import { LineChart } from "echarts/charts";
+import { LineChart, RadarChart } from "echarts/charts";
 import {
 GridComponent,
 TooltipComponent,
@@ -21,6 +21,7 @@ GridComponent,
 TooltipComponent,
 LegendComponent,
 CanvasRenderer,
+RadarChart
 ]);
 
 
