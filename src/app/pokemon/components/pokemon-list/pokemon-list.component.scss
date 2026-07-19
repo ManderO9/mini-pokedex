@@ -1,0 +1,48 @@
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+
+table {
+  border: 1px solid #2a1a1a;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.pokemon-sprite{
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.type-pill {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 999px;
+  color: rgb(233, 233, 233);
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: capitalize;
+  margin: 2px;
+}
+
+.normal { background: #A8A77A; }
+.fire { background: #ff7710; }
+.water { background: #6390F0; }
+.electric { background: #F7D02C; }
+.grass { background: #7AC74C; }
+.ice { background: #96D9D6; }
+.fighting { background: #C22E28; }
+.poison { background: #d41fd1; }
+.ground { background: #E2BF65; }
+.flying { background: #A98FF3; }
+.psychic { background: #F95587; }
+.bug { background: #A6B91A; }
+.rock { background: #B6A136; }
+.ghost { background: #9270be; }
+.dragon { background: #6F35FC; }
+.dark { background: #705746; }
+.steel { background: #B7B7CE;  }
+.fairy { background: #D685AD; }
